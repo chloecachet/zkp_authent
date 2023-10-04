@@ -2,7 +2,7 @@ import secrets
 
 class ChaumPedersenExp:
 
-    def __init__(self, g, h, q, p):
+    def __init__(self, g=4, h=9, q=11, p=23):
         self.g = g
         self.h = h
         self.q = q
@@ -14,7 +14,7 @@ class ChaumPedersenExp:
     def commitment(self):
         # generate random int
         k = secrets.randbelow(self.q)
-        return pow(self.g, k) % self.p, pow(self.h, k) % self.p
+        return k, pow(self.g, k) % self.p, pow(self.h, k) % self.p
 
     def challenge(self):
         # generate random challenge c
