@@ -9,7 +9,7 @@ The client is the ZKP prover and the server is the ZKP verifier.
 - grpcio
 - grpcio tools
 
-## Tutorial
+## Guidelines
 - To run Chaum-Pedersen ZKP unit tests:
 ```
 python test_ChaumPedersenExp.py
